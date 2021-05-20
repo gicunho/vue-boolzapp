@@ -16,7 +16,7 @@
   </head>
   <body class="bg_lightgrey">
     <!-- Container Principale contenente l'app -->
-    <div id="root" class="container d-flex">
+    <div id="root" class="container d-flex mt-2">
         <!-- Main sidebar -->
         <div id="sidebar" class="">
             <!-- User controls -->
@@ -47,8 +47,8 @@
             <!-- Chat Search -->
             <div id="chat_search" class="p-2">
                 <div class="bg-white p-2">
-                    <i class="fas fa-search    "></i>
-                    <input type="text" name="chat_search" id="chat_search" placeholder="Cerca o inizia una nuova chat" class="border-0">
+                    <i class="fas fa-search  fa-lg mr-3 "></i>
+                    <input type="text" width="200" name="chat_search" id="chat_search" placeholder="Cerca o inizia una nuova chat" class="border-0 w-75">
                 </div>
             </div>
             <!-- /Chat Search -->
@@ -57,7 +57,7 @@
             <div id="contacts" class="bg-white px-4 py-3">
                 <div id="contact" v-for="(contact, index) in contacts">
                     <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="avatar " class="avatar my-2">
-                    <span>{{contact.name}}</span>
+                    <span class="pl-3">{{contact.name}}</span>
                 </div>
             </div>
             <!-- /Contacts -->
@@ -66,8 +66,39 @@
         <!-- /Main sidebar -->
 
         <!-- Conversation content -->
-        <div id="conversation" class="bg-light">
-asd
+        <div id="conversation" class="bg-light d-flex flex-column">
+            <!-- Contact Panel -->
+            <div class="user_controls d-flex align-items-center px-2">
+                <div id="user">
+                    <img src="./assets/img/avatar_io.jpg" alt="avatar" class="avatar">
+                    <span>Nome Utente</span>
+                </div>
+                <div class="controls ml-auto">
+                    <i class="fas fa-search fa-2x  "></i>
+                    <i class="fas fa-paperclip fa-2x   "></i>
+                    <i class="fas fa-ellipsis-v fa-2x   "></i>  
+                </div>
+            </div>
+            <!-- /Contact Panel -->
+
+            <!-- Messages -->
+            <div id="messages" class="d-flex flex-column">
+                <div class="message_sent"> youpisiisi </div>
+                <div class="message_received">asd</div>
+                <div class="message_received">asd</div>
+                <div class="message_sent"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ut? </div>
+
+            </div>
+            <!-- /Messages -->
+
+            <!-- Input Panel -->
+            <div id="input_panel" class="mt-auto d-flex justify-content-between p-3 align-items-center">
+                <i class="far fa-smile fa-2x"></i>
+                <input type="text" name="new_message" id="new_message" placeholder="Scrivi un messaggio" class="border-0">
+                <i class="fas fa-microphone fa-2x  "></i>
+            </div>
+            <!-- /Input Panel -->
+
         </div>
         <!-- /Conversation content -->
 

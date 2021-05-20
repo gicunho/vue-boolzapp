@@ -6,7 +6,7 @@
 
 .user_controls {
     background-color: #eaeaea;
-    height: 100px;
+    line-height: 100px;
 }
 
 .avatar {
@@ -15,9 +15,30 @@
 }
 
 .controls i, #chat_search i{
-    padding: 0 5px;
+    padding: 0 10px;
     color: #b1b1b1;
 }
+
+.message_sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+    
+}
+.message_received {
+    background-color: white;
+    align-self: flex-start;
+}
+.message_sent, .message_received {
+    border-radius: 5px;
+    min-width: 100px;
+    max-width: 250px;
+    margin: 10px 0;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
 /* Sidebar classes */
 #sidebar {
     width: 35%;
@@ -46,7 +67,35 @@
 #chat_search {
     background-color: #fafafa;
 }
+
+#contacts {
+    overflow-y: scroll;
+}
+#contact span{
+    font-size: 1.5rem;
+}
 /* Conversation classes */
 #conversation{
     width: 65%;
+}
+
+#messages {
+    background-image: url("../img/mine.jpg");
+    background-size: contain;
+    height: 100%;
+    padding: 20px 100px;
+    flex: auto; 
+}
+
+#input_panel {
+    background-color: #f3eeea;
+}
+#new_message {
+    width: 85%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 10px;
+}
+#input_panel i {
+    color: #6b7376;
 }
