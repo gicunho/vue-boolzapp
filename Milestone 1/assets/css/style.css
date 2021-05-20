@@ -1,0 +1,52 @@
+
+/* Common classes */
+.bg_lightgrey {
+    background-color: #d8dbd6;
+}
+
+.user_controls {
+    background-color: #eaeaea;
+    height: 100px;
+}
+
+.avatar {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.controls i, #chat_search i{
+    padding: 0 5px;
+    color: #b1b1b1;
+}
+/* Sidebar classes */
+#sidebar {
+    width: 35%;
+    border-right: 1px solid #b1b1b1;
+}
+
+#notification_control {
+    background-color: #8edafc;
+}
+#notification_control i {
+    color: #8edafc;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#notifier_link {
+    text-decoration: underline;
+    color: #4f7485;
+    font-size: 0.9rem;
+}
+
+#chat_search {
+    background-color: #fafafa;
+}
+/* Conversation classes */
+#conversation{
+    width: 65%;
+}
