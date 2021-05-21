@@ -1,0 +1,137 @@
+
+/* Common classes */
+.bg_lightgrey {
+    background-color: #d8dbd6;
+}
+
+.user_controls {
+    background-color: #eaeaea;
+    height: 100px;
+}
+
+.avatar {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.controls i, #chat_search i{
+    padding: 0 10px;
+    color: #b1b1b1;
+}
+
+.message_sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+    
+}
+.message_received {
+    background-color: white;
+    align-self: flex-start;
+}
+.message_sent, .message_received {
+    border-radius: 10px;
+    padding: 10px 20px;
+    min-width: 150px;
+    max-width: 250px;
+/*     min-height: 60px; */
+    margin: 10px 0;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #e9ebeb;
+}
+
+.text_big{
+    font-size: 1.5rem;
+}
+
+.active {
+    background-color: #e9ebeb;
+}
+
+/* Sidebar classes */
+#sidebar {
+    width: 35%;
+    border-right: 1px solid #b1b1b1;
+    background-color: white;
+}
+
+#notification_control {
+    background-color: #8edafc;
+}
+#notification_control i {
+    color: #8edafc;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 70px;
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#notifier_link {
+    text-decoration: underline;
+    color: #4f7485;
+    font-size: 0.9rem;
+}
+
+#chat_search {
+    background-color: #fafafa;
+}
+
+#contacts {
+    overflow-y: scroll;
+}
+.contact {
+    border-top: 1px solid #e9ebeb;
+
+}
+
+/* Conversation classes */
+#conversation{
+    width: 65%;
+}
+
+#messages {
+    background-image: url("../img/mine.jpg");
+    background-size: contain;
+    padding: 20px 100px;
+    overflow-y: scroll ;
+    height: 550px;
+    max-height: 550px;
+}
+
+.ora_messaggio {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    font-size: 0.7rem;
+    color: #b1b1b1;
+}
+
+#input_panel {
+    background-color: #f3eeea;
+    margin-top: auto;
+    position: relative;
+}
+#new_message {
+    width: 85%;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#input_panel i {
+    color: #6b7376;
+}
+
+#error {
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
