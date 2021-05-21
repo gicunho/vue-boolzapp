@@ -85,9 +85,18 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
+        ],
+        conversazioneAttuale: [],
+        utenteAttivo: [],
+        numeroUtente: null
     }, // data
     methods: {
-
+        prova(index) {
+            this.conversazioneAttuale = [];
+            this.conversazioneAttuale.push(this.contacts[index].messages);
+            this.utenteAttivo = [];
+            this.utenteAttivo.push(this.contacts[index]);
+            return this.numeroUtente = index
+        }
     } 
 })

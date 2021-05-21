@@ -6,7 +6,7 @@
 
 .user_controls {
     background-color: #eaeaea;
-    line-height: 100px;
+    height: 100px;
 }
 
 .avatar {
@@ -39,10 +39,23 @@ i:hover {
     cursor: pointer;
 }
 
+.contact:hover {
+    background-color: #e9ebeb;
+}
+
+.text_big{
+    font-size: 1.5rem;
+}
+
+.active {
+    background-color: #e9ebeb;
+}
+
 /* Sidebar classes */
 #sidebar {
     width: 35%;
     border-right: 1px solid #b1b1b1;
+    background-color: white;
 }
 
 #notification_control {
@@ -71,9 +84,11 @@ i:hover {
 #contacts {
     overflow-y: scroll;
 }
-#contact span{
-    font-size: 1.5rem;
+.contact {
+    border-top: 1px solid #e9ebeb;
+
 }
+
 /* Conversation classes */
 #conversation{
     width: 65%;
@@ -82,13 +97,15 @@ i:hover {
 #messages {
     background-image: url("../img/mine.jpg");
     background-size: contain;
-    height: 100%;
     padding: 20px 100px;
-    flex: auto; 
-}
+    overflow-y: scroll ;
+    height: 550px;
+    max-height: 550px;
+} 
 
 #input_panel {
     background-color: #f3eeea;
+    margin-top: auto;
 }
 #new_message {
     width: 85%;
