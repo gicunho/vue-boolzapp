@@ -1,7 +1,11 @@
 
 /* Common classes */
-.bg_lightgrey {
-    background-color: #d8dbd6;
+body {
+    height: 100vh;
+    background:linear-gradient(#009688 0px, #009688 120px, #d8dbd6 120px, #d8dbd6)
+}
+#root {
+    margin-top: 20px;
 }
 
 .user_controls {
