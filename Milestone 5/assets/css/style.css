@@ -57,6 +57,28 @@ i:hover {
     background-color: #e9ebeb;
 }
 
+.prova {
+    max-width: 270px;
+}
+.last_message_text {
+    color: #b1b1b1;
+    width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.last_message_date {
+    color: #b1b1b1;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.last_message_text::after {
+    content: ' ...';
+}
+
 /* Sidebar classes */
 #sidebar {
     width: 35%;

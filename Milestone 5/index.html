@@ -54,11 +54,15 @@
             <!-- /Chat Search -->
             
             <!-- Contacts -->
-            <div id="contacts" class="bg-white">
-                <div v-for="(contact, index) in contattiFiltrati" :key="contacts[index].avatar" @click="selezioneContatto(index)" class="p-3 contact" :class="numeroUtente==index ? 'active' : ''">
+            <div id="contacts" class="bg-white ">
+                <div v-for="(contact, index) in contattiFiltrati" :key="contacts[index].avatar" @click="selezioneContatto(index)" class="p-3 contact d-flex" :class="numeroUtente==index ? 'active' : ''">
                     <img :src="`./assets/img/avatar${contact.avatar}.jpg`" alt="avatar " class="avatar ">
-                    <span class="pl-3 text_big">{{contact.name}}</span>
-                    <span v-for="(msg, i) in prova" v-if="msg.nome == contact.name"> {{msg.text}} {{contact.name}} asd</span>
+                    <div class="pl-3 position-relative w-100 prova">
+                        <span class="text_big">{{contact.name}}</span>
+                        <small class="last_message_date">{{lastMsgDate(index)}}</small>
+                        <div class="last_message_text">{{lastMsgText(index)}}</div>
+                    </div>
+                    
                 </div>
             </div>
             <!-- /Contacts -->
@@ -70,9 +74,11 @@
         <div id="conversation" class="">
             <!-- Contact Panel -->
             <div class="user_controls d-flex align-items-center px-2">
-                <div id="user" v-for="utente in utenteAttivo" class="d-flex">
+                <div id="user" v-for="(utente, index) in utenteAttivo" class="d-flex">
                     <img :src="`./assets/img/avatar${utente.avatar}.jpg`" alt="avatar" class="avatar">
                     <span class="text_big pl-3">{{utente.name}}</span>
+
+                    <!-- <div>{{ulAccesso(index)}}</div> -->
                 </div>
                 <div class="controls ml-auto">
                     <i class="fas fa-search fa-2x  "></i>
@@ -106,8 +112,6 @@
 
         </div>
         <!-- /Conversation content -->
-
-        <button @click="ultimoMessaggio()">Prova</button>
     </div>
     <!-- /Container Principale contenente l'app -->
     

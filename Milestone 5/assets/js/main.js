@@ -92,7 +92,6 @@ const app = new Vue({
         messaggio: '',
         ricercaContatto: '',
         contactsFiltered: [],
-        prova: [],
     }, // data
     methods: {
         selezioneContatto(index) {
@@ -130,24 +129,22 @@ const app = new Vue({
             }
         
         },
-        ultimoMessaggio() {
-            this.prova = [];
-            this.contacts.forEach((element,index) => {
-                //console.log(element.messages.length, element.name);
-                element.messages.forEach((el, i) =>{
-                    const numMsg = element.messages.length - 1
-                    if (i === numMsg){
-                        console.log(el, element.name, numMsg, i);
-                        //console.log(this.contacts[index]);
-                        const last = {...el, nome: element.name};
-                        console.log(last);
-                        this.prova.push(last);
-                    }
-                    
+        lastMsgText(index) {
+            return this.contattiFiltrati[index].messages[this.contattiFiltrati[index].messages.length - 1].text
+        },
+        lastMsgDate(index) {
+            return this.contattiFiltrati[index].messages[this.contattiFiltrati[index].messages.length - 1].date
+        },
+        ulAccesso() {                
+                return this.utenteAttivo[0].messages.filter((message, i) => {
+                    if (message.status == 'received') {
+                        console.log(message);
+                        console.log(this.utenteAttivo[0].messages.length);
+                    console.log(message.date, i);
+                 return message                 }
                 })
-                                
-            })
         }
+
         
     },
     
@@ -156,9 +153,7 @@ const app = new Vue({
             return this.contacts.filter(contact => {
                 return contact.name.toLowerCase().includes(this.ricercaContatto.toLowerCase());
             })
-        }
-    },
-    created() {
-        
+        },
+
     }
 })
