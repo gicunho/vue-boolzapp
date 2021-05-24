@@ -89,6 +89,7 @@ i:hover {
 
 #contacts {
     overflow-y: scroll;
+    max-height: 460px;
 }
 .contact {
     border-top: 1px solid #e9ebeb;
