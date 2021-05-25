@@ -137,12 +137,24 @@ const app = new Vue({
         },
         ulAccesso() {                
                 return this.utenteAttivo[0].messages.filter((message, i) => {
+                    //console.log(this.utenteAttivo[0].messages); 
+
                     if (message.status == 'received') {
-                        console.log(message);
-                        console.log(this.utenteAttivo[0].messages.length);
-                    console.log(message.date, i);
-                 return message                 }
+                        //console.log(message);
+                         
+                        //console.log(this.utenteAttivo[0].messages.length);
+                        //console.log(this.ulAccesso.length);
+                        //console.log(message.date, i);
+                        return message  }
+                 //console.log(this.ulAccesso.length);
+                
                 })
+        },
+        messageDelete(message, index) {
+            this.conversazioneAttuale[0].splice(index, 1)
+        },
+        dropdownShow(){
+            document.getElementById('message_options').classList.toggle('show')
         }
 
         

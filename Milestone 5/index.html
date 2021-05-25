@@ -76,8 +76,10 @@
             <div class="user_controls d-flex align-items-center px-2">
                 <div id="user" v-for="(utente, index) in utenteAttivo" class="d-flex">
                     <img :src="`./assets/img/avatar${utente.avatar}.jpg`" alt="avatar" class="avatar">
-                    <span class="text_big pl-3">{{utente.name}}</span>
-
+                    <div class="pl-3">
+                        <span class="text_big">{{utente.name}}</span>
+                        <div v-for="(message, i) in ulAccesso()" v-if="i == ulAccesso().length - 1" class="text_grey">Ultimo accesso: {{message.date}}</div>
+                    </div>
                     <!-- <div>{{ulAccesso(index)}}</div> -->
                 </div>
                 <div class="controls ml-auto">
@@ -96,6 +98,13 @@
                     <div :class="`message_${message.status}`" class="d-flex flex-column position-relative">
                         <div class="pb-1">{{message.text}}</div> 
                         <div class="ora_messaggio text-right">{{message.date}}</div>
+                        <div class="dropdown" @click='dropdownShow()'>
+                            <i class="fas fa-chevron-down" ></i>
+                            <div id="message_options" class="dropdown_content">
+                                <div>Message Info</div>
+                                <div @click="messageDelete(message, index)">Delete Message</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
